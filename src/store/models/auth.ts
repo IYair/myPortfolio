@@ -1,9 +1,6 @@
 import { createModel } from '@rematch/core'
 import { RootModel } from './models'
 import { Service } from '@/pages/api/Service'
-import axios from 'axios'
-import { redirect } from 'next/dist/server/api-utils';
-import { error } from '../../constants/types';
 
 const $api = new Service(process.env.NEXT_API_BASE_URL || '')
 export interface ICredentials {

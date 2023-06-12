@@ -10,8 +10,7 @@ module.exports = {
           '0 0 10px rgba(255, 0, 0, 1)',
           '0 0 10px rgba(255, 0, 0, 1)',
           '0 0 10px rgba(255, 0, 0, 1)',
-
-      ]
+        ]
       },
       keyframes: {
         'enter-from-left': {
@@ -41,8 +40,8 @@ module.exports = {
       fontFamily: {
         'sans': ['Roboto Condensed', 'sans-serif']
       },
-      
+
     }
   },
-  plugins: [require('tailwind-scrollbar')({ nocompatible: true })]
+  plugins: [require('tailwind-scrollbar')({ nocompatible: true }), '@headlessui/tailwindcss']
 }
