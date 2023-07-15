@@ -161,7 +161,7 @@ export const SelectSearchComponent = ({
       <TextComponent
         tag={enumTextTags.label}
         sizeFont={enumTextSizes.s14}
-        classNames='text-secondary-500 font-bold'
+        className='text-secondary-500 font-bold'
       >
         {label}
       </TextComponent>
@@ -205,7 +205,7 @@ export const SelectSearchComponent = ({
       {hasError && (
         <TextComponent
           tag={enumTextTags.p}
-          classNames='font-bold text-danger-500'
+          className='font-bold text-danger-500'
           sizeFont={enumTextSizes.s12}>
           {errorMessage || ''}
         </TextComponent>

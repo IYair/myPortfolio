@@ -35,7 +35,7 @@ export const ResetPassword = (props: TLoginProps) => {
         <TextComponent
           tag={enumTextTags.h1}
           sizeFont={enumTextSizes.s21}
-          classNames='text-center font-bold'>
+          className='text-center font-bold'>
           {'Recuperacion de contraseña!'}
         </TextComponent>
 
@@ -55,7 +55,7 @@ export const ResetPassword = (props: TLoginProps) => {
             errorMessage={form.formState.errors.email?.message}
           />
           <div className='my-5'>
-            <TextComponent classNames='text-withe hover:text-cyan-500'>
+            <TextComponent className='text-withe hover:text-cyan-500'>
               <Link href='/auth/signin'>{'Inicia sesión'}</Link>
             </TextComponent>
           </div>

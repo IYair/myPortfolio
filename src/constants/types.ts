@@ -1,6 +1,13 @@
 import { ReactNode } from 'react'
 
 export enum enumTextSizes {
+  s72 = '72',
+  s64 = '64',
+  s56 = '56',
+  s48 = '48',
+  s44 = '44',
+  s40 = '40',
+  s38 = '38',
   s36 = '36',
   s22 = '22',
   s21 = '21',

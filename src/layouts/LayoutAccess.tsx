@@ -6,7 +6,6 @@ import { getSession, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { NavBar } from '@/components/nav/NavBar'
 import Header from '@/components/nav/Header'
-import { set } from 'lodash'
 
 export interface ILayoutAccessChildrenProps {}
 
@@ -70,7 +69,7 @@ export const LayoutAccess = ({ children, card = false }: ILayoutAccessProps) => 
         {/* Background */}
         <Image
           fill
-          src='/NoiseTexturenoiseBackgound.png'
+          src='/images/NoiseTexture.png'
           alt='noise'
           className='-z-10'
         />
@@ -99,8 +98,7 @@ export const LayoutAccess = ({ children, card = false }: ILayoutAccessProps) => 
               shadow-box
               bg-white
               dark:bg-gray-800
-              bg-opacity-30
-              backdrop-blur-3xl
+              bg-opacity-40
               flex
               justify-between
               '>

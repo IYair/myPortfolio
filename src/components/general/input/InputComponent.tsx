@@ -109,7 +109,7 @@ export const InputComponent = ({
         {!withoutLabel && (
           <TextComponent
             tag={enumTextTags.label}
-            classNames={labelClasses}>
+            className={labelClasses}>
             {labelText}
           </TextComponent>
         )}
@@ -160,7 +160,7 @@ export const InputComponent = ({
 
         {hasError && (
           <TextComponent
-            classNames={errorClasses}
+            className={errorClasses}
             sizeFont={enumTextSizes.s12}>
             {errorMessage || ''}
           </TextComponent>

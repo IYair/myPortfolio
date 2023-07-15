@@ -7,14 +7,14 @@ interface ITextComponentProps extends IReactNode {
   //
   sizeFont?: enumTextSizes
   //
-  classNames?: string[] | string
+  className?: string[] | string
   //
   children: ReactNode | ReactNode[] | string
 }
-export const TextComponent = ({ classNames = [], tag = enumTextTags.p, sizeFont = enumTextSizes.s14, ...props }: ITextComponentProps) => {
+export const TextComponent = ({ className = [], tag = enumTextTags.p, sizeFont = enumTextSizes.s14, ...props }: ITextComponentProps) => {
   const CustomTag = tag
 
-  const classes = cn('font-lato', classNames, `text-${sizeFont}`)
+  const classes = cn('font-lato', className, `text-${sizeFont}`)
 
   return <CustomTag className={classes}>{props.children ? props.children : ''}</CustomTag>
 }

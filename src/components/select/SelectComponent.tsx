@@ -123,7 +123,7 @@ export const SelectComponent = ({
           <div className='flex flex-inline'>
             <TextComponent
               tag={enumTextTags.label}
-              classNames={labelClasses}
+              className={labelClasses}
               sizeFont={enumTextSizes.s14}>
               {labelText}
             </TextComponent>
@@ -137,7 +137,7 @@ export const SelectComponent = ({
         {!labelIcon && labelText && (
           <TextComponent
             tag={enumTextTags.label}
-            classNames={labelClasses}
+            className={labelClasses}
             sizeFont={enumTextSizes.s14}>
             {labelText}
           </TextComponent>
@@ -167,7 +167,7 @@ export const SelectComponent = ({
         {hasError && (
           <TextComponent
             tag={enumTextTags.p}
-            classNames={errorClasses}
+            className={errorClasses}
             sizeFont={enumTextSizes.s12}>
             {errorMessage || ''}
           </TextComponent>

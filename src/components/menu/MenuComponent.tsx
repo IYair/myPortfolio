@@ -1,7 +1,7 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import { ClipboardDocumentCheckIcon, UserCircleIcon, ArrowRightOnRectangleIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
-import { Cog6ToothIcon, UserIcon } from '@heroicons/react/24/outline'
+import { ClipboardDocumentCheckIcon, UserCircleIcon, ArrowRightOnRectangleIcon } from '@heroicons/react/20/solid'
+import { Cog6ToothIcon, UserIcon, Bars3Icon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import { signOut } from 'next-auth/react'
 
@@ -39,11 +39,7 @@ export default function MenuComponent({ isLogin = false }: Props) {
             className='flex'
             onClick={handleToggle}>
             <div className='hover:drop-shadow-neon'>
-              <label className='relative w-10 h-10 cursor-pointer flex flex-col items-center justify-center gap-[10px] tog'>
-                <div className='w-[100%] h-1 bg-white rounded styles-bar'></div>
-                <div className='w-[100%] h-1 bg-white rounded styles-bar2'></div>
-                <div className='w-[100%] h-1 bg-white rounded styles-bar2'></div>
-              </label>
+              <Bars3Icon className='h-12 w-12 text-white' />
             </div>
           </Popover.Button>
 
@@ -59,7 +55,7 @@ export default function MenuComponent({ isLogin = false }: Props) {
             <Popover.Panel
               className='absolute -left-48 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4'
               static>
-              <div className='w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-vingateBlue bg-opacity-20 backdrop-blur-xl text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 hover:shadow-[0_0_15px_0_rgba(255,255,255,0.5)]'>
+              <div className='w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-vingateBlue bg-opacity-20 backdrop-blur-3xl text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 hover:shadow-[0_0_15px_0_rgba(255,255,255,0.5)]'>
                 <div className='p-4'>
                   {solutions.map(item => (
                     <div

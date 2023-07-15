@@ -54,7 +54,7 @@ export const Signin = (props: TLoginProps) => {
         <TextComponent
           tag={enumTextTags.h1}
           sizeFont={enumTextSizes.s21}
-          classNames='text-center font-bold'>
+          className='text-center font-bold'>
           {'¡Bienvenido!'}
         </TextComponent>
 
@@ -98,13 +98,13 @@ export const Signin = (props: TLoginProps) => {
           />
           <div className='flex flex-row justify-between'>
             <div className='my-5'>
-              <TextComponent classNames='text-withe hover:text-cyan-500'>
+              <TextComponent className='text-withe hover:text-cyan-500'>
                 <Link href='/auth/reset_password'>{'Recuperar contraseña'}</Link>
               </TextComponent>
             </div>
 
             <div className='my-5'>
-              <TextComponent classNames='text-withe hover:text-cyan-500'>
+              <TextComponent className='text-withe hover:text-cyan-500'>
                 <Link href='/auth/register'>{'Registrate'}</Link>
               </TextComponent>
             </div>

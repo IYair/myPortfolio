@@ -38,7 +38,7 @@ export const LoaderComponent = (props: TLoaderComponentProps) => {
           <TextComponent
             tag={enumTextTags.h3}
             sizeFont={enumTextSizes.s14}
-            classNames='text-principal-500 text-center font-bold'>
+            className='text-principal-500 text-center font-bold'>
             Cargando...
           </TextComponent>
         )}

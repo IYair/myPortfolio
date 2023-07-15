@@ -1,8 +1,9 @@
 {
-  "base-500": "#187276",
+  "base-500": "#24374F",
   "base-b-500": "#AADB1E",
   "base-c-500": "#FFFFFF",
   "base-d-500": "#95E5E9",
   "base-e-500": "#6CFF6C",
-  "base-f-500": "#AADB1E"
+  "base-f-500": "#AADB1E",
+  "acent-500": "#C20002"
 }

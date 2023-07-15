@@ -64,7 +64,7 @@ export default function useModalDialogs() {
           <TextComponent
             tag={enumTextTags.h1}
             sizeFont={enumTextSizes.s21}
-            classNames='py-3 text-principal-500 font-bold text-center'>
+            className='py-3 text-principal-500 font-bold text-center'>
             {props.title || ''}
           </TextComponent>
         )}
@@ -74,7 +74,7 @@ export default function useModalDialogs() {
           <TextComponent
             tag={enumTextTags.h1}
             sizeFont={enumTextSizes.s21}
-            classNames='py-3 text-principal-500 font-bold text-center'>
+            className='py-3 text-principal-500 font-bold text-center'>
             {props.message || ''}
           </TextComponent>
         )}
@@ -108,14 +108,14 @@ export default function useModalDialogs() {
         <TextComponent
           tag={enumTextTags.h1}
           sizeFont={enumTextSizes.s21}
-          classNames='py-3 text-principal-500 font-bold text-center'>
+          className='py-3 text-principal-500 font-bold text-center'>
           {props.title || ''}
         </TextComponent>
         {/* Message */}
         <TextComponent
           tag={enumTextTags.p}
           sizeFont={enumTextSizes.s18}
-          classNames='py-3 text-principal-500 text-center'>
+          className='py-3 text-principal-500 text-center'>
           {props.message || ''}
         </TextComponent>
         <div>
@@ -145,7 +145,7 @@ export default function useModalDialogs() {
           <TextComponent
             tag={enumTextTags.h1}
             sizeFont={enumTextSizes.s21}
-            classNames={cn('text-principal-500 font-bold text-center')}>
+            className={cn('text-principal-500 font-bold text-center')}>
             {props.title}
           </TextComponent>
 

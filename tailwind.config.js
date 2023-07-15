@@ -1,3 +1,4 @@
+const { url } = require('inspector')
 const base = require('./src/data/theme/base.json')
 
 /** @type {import('tailwindcss').Config} */
@@ -22,7 +23,10 @@ module.exports = {
           '100%': { opacity: 1 }
         }
       },
-      backgroundImage: { 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))' },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'noise-texture': 'url("/public/images/NoiseTexture.png")',
+      },
       colors: {
         ...base,
         'midnigth': '#0B0D16',

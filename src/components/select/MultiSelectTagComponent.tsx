@@ -180,7 +180,7 @@ export const MultiSelectTagComponent = (props: IMultiSelectTagComponentProps) =>
       <TextComponent
         tag={enumTextTags.label}
         sizeFont={enumTextSizes.s14}
-        classNames={cn(`mb-1 font-bold ${props.disabled ? 'text-disabled-500' : 'text-secondary-500'} `)}>
+        className={cn(`mb-1 font-bold ${props.disabled ? 'text-disabled-500' : 'text-secondary-500'} `)}>
         {props.label}
       </TextComponent>
       <CreatableSelect

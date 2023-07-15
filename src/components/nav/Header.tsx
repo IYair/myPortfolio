@@ -8,15 +8,15 @@ interface IHeaderProps {
 }
 const Header = ({ isLogin = false }: IHeaderProps) => {
   return (
-    <header className='grid grid-rows-1 pt-10 w-full absolute top-0'>
+    <header className='grid grid-rows-1 pt-10 w-full absolute top-0 z-20'>
       <div className='flex flex-row justify-between'>
         <Link href='/'>
           <Image
-            src='/Logo.png'
+            src='/icons/Logo.svg'
             alt='iYairDev'
-            width={120}
-            height={120}
-            className='flex z-10 pl-10'
+            width={100}
+            height={100}
+            className='flex pl-10'
           />
         </Link>
         <div className='flex gap-10 pr-10'>
