@@ -7,11 +7,7 @@ module.exports = {
   theme: {
     extend: {
       dropShadow: {
-        'neon': [
-          '0 0 10px rgba(255, 0, 0, 1)',
-          '0 0 10px rgba(255, 0, 0, 1)',
-          '0 0 10px rgba(255, 0, 0, 1)',
-        ]
+        neon: ['0 0 10px rgba(255, 0, 0, 1)', '0 0 10px rgba(255, 0, 0, 1)', '0 0 10px rgba(255, 0, 0, 1)']
       },
       keyframes: {
         'enter-from-left': {
@@ -25,13 +21,13 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'noise-texture': 'url("/public/images/NoiseTexture.png")',
+        'noise-texture': 'url("/public/images/NoiseTexture.png")'
       },
       colors: {
         ...base,
-        'midnigth': '#0B0D16',
-        'ligth': '#E5E5E5',
-        'vingateBlue': '#24374F',
+        midnigth: '#0B0D16',
+        ligth: '#E5E5E5',
+        vingateBlue: '#24374F'
       },
       animation: {
         'spin-slow': 'spin 5s linear infinite'
@@ -42,9 +38,23 @@ module.exports = {
         box: '0px 0px 6px rgba(0, 0, 0, 0.16)'
       },
       fontFamily: {
-        'sans': ['Roboto Condensed', 'sans-serif']
+        sans: ['Roboto Condensed', 'sans-serif']
       },
-
+      animation: {
+        text: 'text 5s ease infinite'
+      },
+      keyframes: {
+        text: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
+        }
+      }
     }
   },
   plugins: [require('tailwind-scrollbar')({ nocompatible: true }), '@headlessui/tailwindcss']

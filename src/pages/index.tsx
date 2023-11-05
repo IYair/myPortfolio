@@ -23,19 +23,18 @@ export default function Home(props: any) {
             width={850}
             alt='Yair'
             priority
-            
-            className='absolute right-[8rem] -bottom-2 h-[98%] w-fit'
+            className='absolute right-[8rem] -bottom-2 h-[98%] w-auto'
           />
         </div>
         <div
           className='absolute left-[12.5%] top-1/2 text-[36px] text-white font-extralight z-10 tracking-[.3em]	whitespace-pre-line
-          drop-shadow-[0_0_10px_rgba(255,255,255,1)]
           '>
           <TextComponent
             sizeFont={enumTextSizes.s44}
             tag={enumTextTags.h1}
-            className='text-[64px]'
-            >
+            className='text-[100px] font-medium bg-gradient-to-r bg-clip-text  text-transparent 
+            from-amber-800 via-yellow-300 to-white
+            animate-text'>
             YAIR CHAN
           </TextComponent>
           <TypewriterComponent
@@ -46,7 +45,8 @@ export default function Home(props: any) {
               loop: true,
               delay: 50,
               deleteSpeed: 50,
-              cursorClassName: 'text-red-600 Typewriter__cursor drop-shadow-neon -z-20'
+              wrapperClassName: 'text-[36px] text-white font-extralight z-10 tracking-[.3em]	whitespace-pre-line drop-shadow-[0_0_10px_rgba(255,255,255,1)]',
+              cursorClassName: 'text-red-600 Typewriter__cursor drop-shadow-neon -z-20 drop-shadow-[0_0_10px_rgba(255,255,255,1)]'
             }}
           />
         </div>

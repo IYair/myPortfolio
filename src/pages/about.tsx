@@ -12,11 +12,134 @@ import {
 import { LayoutAccess } from '@/layouts/LayoutAccess'
 import Image from 'next/image'
 
+// se crea un tipo de dato para poder iterar los skills y mostrarlos en pantalla
+type Skill = {
+  name: string
+  icon: string
+}
+
+// se crea un tipo de dato para poder iterar los datos de contacto y mostrarlos en pantalla
+type Contact = {
+  icon: string
+  data: string
+  heroicon?: boolean
+  heroiconComponent?: JSX.Element
+}
+
+// se crea un array de objetos de tipo skill para poder iterarlos y mostrarlos en pantalla
+
+const skills: Skill[] = [
+  {
+    name: 'HTML',
+    icon: '/icons/Html.svg'
+  },
+  {
+    name: 'CSS',
+    icon: '/icons/Css.svg'
+  },
+  {
+    name: 'Javascript',
+    icon: '/icons/logo-javascript.svg'
+  },
+  {
+    name: 'Typescript',
+    icon: '/icons/devicon_typescript.svg'
+  },
+  {
+    name: 'React js',
+    icon: '/icons/React.svg'
+  },
+  {
+    name: 'Next js',
+    icon: '/icons/Nextjs-white.svg'
+  },
+  {
+    name: 'Node js',
+    icon: '/icons/vscode-icons_file-type-node.svg'
+  },
+  {
+    name: 'Docker',
+    icon: '/icons/logo-docker.svg'
+  },
+  {
+    name: 'Postman',
+    icon: '/icons/devicon_postman.svg'
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: '/icons/devicon_tailwindcss.svg'
+  },
+  {
+    name: 'MySQL',
+    icon: '/icons/devicon_mysql.svg'
+  },
+  {
+    name: 'Prisma',
+    icon: '/icons/devicon_prisma.svg'
+  },
+  {
+    name: 'Redux',
+    icon: '/icons/devicon_redux.svg'
+  },
+  {
+    name: 'Git',
+    icon: '/icons/devicon_git.svg'
+  },
+  {
+    name: 'Figma',
+    icon: '/icons/logos_figma.svg'
+  },
+  {
+    name: 'Selenium',
+    icon: '/icons/skill-icons_selenium.svg'
+  },
+  {
+    name: 'Sass',
+    icon: '/icons/logos_sass.svg'
+  },
+  {
+    name: 'Jest',
+    icon: '/icons/skill-icons_jest.svg'
+  },
+]
+
+// se crea un array de objetos de tipo contact para poder iterarlos y mostrarlos en pantalla
+
+const contacts: Contact[] = [
+  {
+    icon: '/icons/flag-mexico.svg',
+    data: 'Campeche, Mexico',
+    heroicon: false
+  },
+  {
+    icon: '',
+    data: '+52 981-178-50-39',
+    heroiconComponent: <DevicePhoneMobileIcon className='w-9 h-auto ml-8 drop-shadow-[2px_8px_4px_rgba(0,0,0,0.4)]' />,
+    heroicon: true
+  },
+  {
+    icon: '',
+    heroiconComponent: <EnvelopeIcon className='w-9 h-auto ml-8 drop-shadow-[2px_8px_4px_rgba(0,0,0,0.4)]' />,
+    data: 'enyaoficial001@gmail.com',
+    heroicon: true
+  },
+  {
+    icon: '/icons/icon-linkedin.svg',
+    data: 'www.linkedin.com/in/yair-chan',
+    heroicon: false
+  },
+  {
+    icon: '/icons/github.svg',
+    data: 'github.com/IYair',
+    heroicon: false
+  }
+]
+
 const about = () => {
   return (
     <LayoutAccess>
       <div>
-        <div className='grid grid-cols-3 h-screen w-full p-24 rounded-2xl -z-100 gap-14 overflow-y-scroll'>
+        <div className='grid grid-cols-3 h-screen w-full px-40 py-24 rounded-2xl -z-100 gap-14 overflow-y-scroll'>
           <section
             id='sideLeft'
             className='flex flex-col col-span-1'>
@@ -57,128 +180,26 @@ const about = () => {
                 <TrophyIcon className='w-10 h-auto mr-4 drop-shadow-[2px_8px_4px_rgba(0,0,0,0.4)]' />
                 HABILIDADES TÉCNICAS
               </TextComponent>
-              <div className='flex flex-col space-y-4'>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/Html.svg'
-                    alt='HTML'
-                    width={24}
-                    height={24}
-                    className='w-10 h-auto ml-8'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>HTML</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/Css.svg'
-                    alt='CSS'
-                    width={24}
-                    height={24}
-                    className='w-10 h-auto ml-8 rounded-md'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>CSS</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/logo-javascript.svg'
-                    alt='HTML'
-                    width={24}
-                    height={24}
-                    className='w-8 h-auto ml-8 rounded-md'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>Javascript</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/React.svg'
-                    alt='React'
-                    width={24}
-                    height={24}
-                    className='w-10 h-auto ml-8'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>React js</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/Nextjs-white.svg'
-                    alt='Next js'
-                    width={24}
-                    height={24}
-                    className='w-12 h-auto ml-8'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin self-center'>
-                    <strong>Next js</strong>
-                  </TextComponent>
-                </div>
-
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/logo-docker.svg'
-                    alt='Docker'
-                    width={24}
-                    height={24}
-                    className='w-10 h-auto ml-8 rounded-md'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin self-center'>
-                    <strong>Docker</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/.svg'
-                    alt='HTML'
-                    width={24}
-                    height={24}
-                    className='w-8 h-auto ml-8 rounded-md'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>Javascript</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/logo-javascript.svg'
-                    alt='HTML'
-                    width={24}
-                    height={24}
-                    className='w-8 h-auto ml-8 rounded-md'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>Javascript</strong>
-                  </TextComponent>
-                </div>
+              <div className='grid grid-cols-4 gap-4 mt-10'>
+                {skills.map((skill, index) => (
+                  <div
+                    key={index}
+                    className='flex flex-col items-center'>
+                    <Image
+                      src={skill.icon}
+                      alt={skill.name}
+                      height={64}
+                      width={64}
+                      className='w-16 h-16'
+                    />
+                    <TextComponent
+                      tag={enumTextTags.p}
+                      sizeFont={enumTextSizes.s16}
+                      className='text-white text-justify font-thin'>
+                      {skill.name}
+                    </TextComponent>
+                  </div>
+                ))}
               </div>
             </div>
             <div className='mt-10'>
@@ -189,70 +210,32 @@ const about = () => {
                 <RocketLaunchIcon className='w-10 h-auto mr-4 drop-shadow-[2px_8px_4px_rgba(0,0,0,0.4)]' />
                 CONTACTAME
               </TextComponent>
-              <div className='flex flex-col space-y-4'>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/flag-mexico.svg'
-                    alt='Mexico'
-                    width={24}
-                    height={24}
-                    className='w-8 h-auto ml-8'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>Campeche, Mexico</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <DevicePhoneMobileIcon className='w-8 h-auto ml-8 text-white' />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>+52 981-178-50-39</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <EnvelopeIcon className='w-8 h-auto ml-8 text-white' />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>Enyaoficial001@gmail.com</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/icon-linkedin.svg'
-                    alt='Mexico'
-                    width={24}
-                    height={24}
-                    className='w-8 h-auto ml-8'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>Campeche, Mexico</strong>
-                  </TextComponent>
-                </div>
-                <div className='flex flex-row'>
-                  <Image
-                    src='/icons/github.svg'
-                    alt='Github'
-                    width={24}
-                    height={24}
-                    className='w-8 h-auto ml-8'
-                  />
-                  <TextComponent
-                    tag={enumTextTags.p}
-                    sizeFont={enumTextSizes.s20}
-                    className='text-white text-justify ml-4 font-thin'>
-                    <strong>github.com/IYair</strong>
-                  </TextComponent>
-                </div>
+              <div className='flex flex-col space-y-6'>
+                {contacts.map((contact, index) => (
+                  <div
+                    key={index}
+                    className='flex flex-row items-center'>
+                    {contact.heroicon ? (
+                      <>{contact.heroiconComponent}</>
+                    ) : (
+                      <>
+                        <Image
+                          src={contact.icon}
+                          alt={contact.data}
+                          width={24}
+                          height={24}
+                          className='w-8 h-auto ml-8'
+                        />
+                      </>
+                    )}
+                    <TextComponent
+                      tag={enumTextTags.p}
+                      sizeFont={enumTextSizes.s18}
+                      className='text-white text-justify font-thin ml-2'>
+                      {contact.data}
+                    </TextComponent>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
